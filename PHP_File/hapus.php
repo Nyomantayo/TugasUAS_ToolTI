@@ -1,9 +1,9 @@
 <?php
 
-$conn = mysqli_connect("localhost", "root", "", "dbUdayana");
+$conn = mysqli_connect("localhost", "root", "", "dbudayana");
 $id = $_GET["id"];
 
-$result = mysqli_query($conn, "DELETE FROM tbDosen WHERE idDosen=$id");
+$result = mysqli_query($conn, "DELETE FROM tbdosen WHERE idDosen=$id");
 if(mysqli_affected_rows($conn) > 0){
     echo"
     <script>

@@ -1,6 +1,6 @@
 <?php
     // koneksi ke database
-    $conn = mysqli_connect("localhost", "root", "", "dbUdayana"); // nama host, username, pass (xampp biasanya kosong), nama database
+    $conn = mysqli_connect("localhost", "root", "", "dbudayana"); // nama host, username, pass (xampp biasanya kosong), nama database
 
     // ambil data dari tabel
     $result = mysqli_query($conn, "SELECT * FROM tbDosen");
@@ -15,7 +15,7 @@
         $mataKuliah = htmlspecialchars($_POST["mataKuliah"]);
 
         // query insert data
-        $query = "INSERT INTO tbDosen (namaDosen, alamat, noTlp, mataKuliah) VALUES
+        $query = "INSERT INTO tbdosen (namaDosen, alamat, noTlp, mataKuliah) VALUES
                     ('$namaDosen' , '$alamat' , '$noTlp' , '$mataKuliah')
                  ";
         mysqli_query($conn, $query);

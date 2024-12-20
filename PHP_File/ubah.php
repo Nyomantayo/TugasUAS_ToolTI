@@ -1,9 +1,9 @@
 <?php
     // koneksi ke database
-    $conn = mysqli_connect("localhost", "root", "", "dbUdayana"); // nama host, username, pass (xampp biasanya kosong), nama database
+    $conn = mysqli_connect("localhost", "root", "", "dbudayana"); // nama host, username, pass (xampp biasanya kosong), nama database
     $id = $_GET["id"];
     // ambil data dari tabel
-    $result = mysqli_query($conn, "SELECT * FROM tbDosen WHERE idDosen=$id");
+    $result = mysqli_query($conn, "SELECT * FROM tbdosen WHERE idDosen=$id");
     if(!$result){
         echo mysqli_error($conn);
     }
@@ -15,7 +15,7 @@
         $mataKuliah = htmlspecialchars($_POST["mataKuliah"]);
 
         // query insert data
-        $query = "UPDATE tbDosen SET
+        $query = "UPDATE tbdosen SET
                     namaDosen = '$namaDosen',
                     alamat = '$alamat',
                     noTlp = '$noTlp',
